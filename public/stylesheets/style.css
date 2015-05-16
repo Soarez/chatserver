@@ -1,0 +1,85 @@
+html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+img {
+    vertical-align: middle;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#wrap {
+    min-height: 100%;
+    height: auto !important;
+    margin: 0 auto -40px;
+}
+
+div.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 20px;
+}
+
+div.logo {
+    background-color: #FF0000;
+    width: 100px;
+    height: 100px;
+    vertical-align: middle;
+}
+
+div.header-image {
+    background-color: #0066CC;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+div.mydiv, div.info {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.nav li a {
+  text-decoration: none;
+  color: coral;
+  border: 2px solid coral;
+  padding: 5px;
+  border-radius: 12px;
+}
+
+.nav li {
+    float: left;
+    list-style: none;
+    margin: 5px;
+}
+
+#messages form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 90%; }
+#messages form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
+#messages form button { width: 9%; background: coral; border: none; padding: 10px; }
+
+#messages {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#messages li {
+	padding: 5px 10px;
+}
+
+#messages li:nth-child(odd) {
+	background: #eee;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }

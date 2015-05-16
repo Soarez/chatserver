@@ -1,0 +1,35 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    div#wrap
+        div.header-image
+            a(href="/")
+                img(src='')
+        div.navbar
+            div.mydiv
+                ul.nav
+                    if username
+                        li
+                            a(href='/') Chat
+                        li
+                            a(href='/Settings') Settings
+                        li
+                            a(href='/logout') Logout
+                    else
+                        li
+                            a(href='/signin') Login
+                        li
+                            a(href='/signup') Sign up
+        div.info
+            if username
+                p='Welcome '+username
+            else
+                p Welcome stranger
+        div.mydiv
+            block content
+    script(src="/socket.io/socket.io.js")
+    script(src="http://code.jquery.com/jquery-1.11.1.js")
+    script(src="/javascripts/main.js")
