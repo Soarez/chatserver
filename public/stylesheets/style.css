@@ -83,3 +83,8 @@ div.mydiv, div.info {
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
+
+.event {
+  font-style: italic;
+  color: green;
+}

@@ -7,6 +7,7 @@
 var app = require('../app');
 var debug = require('debug')('chatserver:server');
 var http = require('http');
+var cookieParser = require('cookie-parser');
 
 
 /**
@@ -24,13 +25,19 @@ var server = http.createServer(app);
 var io = require('socket.io')(server);
 
 io.on('connection', function(socket){
-  socket.on('login', function(usr) {
-    console.log(usr +' has connected');
+  var username = 'unkown';
+
+  io.emit('chat event', 'new user connected');
+
+  socket.on('username', function(name) {
+    io.emit('chat event', username + ' is now known as ' + name);
+    username = name;
   });
+
   socket.on('chat message', function(msg){
-    console.log('message: ' + msg);
     io.emit('chat message', msg);
   });
+
   socket.on('logout', function(usr) {
     console.log(usr + ' has disconnected');
   });
